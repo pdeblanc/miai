@@ -42,16 +42,24 @@ def fine_value(initial_stones, initial_player, katago_process):
     komi += round(2 * delta) / 2
     delta = rough_value(initial_stones, initial_player, komi, katago_process)
     print("komi", komi, "delta", delta)
+    komi += round(2 * delta) / 2
+    delta = rough_value(initial_stones, initial_player, komi, katago_process)
+    print("komi", komi, "delta", delta)
     komi += delta
     return komi
+
+
+def mean_value(initial_stones, katago_process):
+    b_value = fine_value(initial_stones, "B", katago_process)
+    w_value = fine_value(initial_stones, "W", katago_process)
+    return (b_value + w_value) / 2
 
 
 def analyze():
     child = pexpect.spawn(START_COMMAND, encoding='utf-8')
     child.expect('Started, ready to begin handling requests')
     child.expect(r"\n")
-    print(rough_value([["W", "Q4"], ["W", "C4"]], "B", 0.0, child))
-    print(fine_value([["W", "Q4"], ["W", "C4"]], "B", child))
+    print(mean_value([["B", "Q4"], ["W", "D4"]], child))
 
 
 if __name__ == "__main__":
