@@ -13,7 +13,7 @@ START_COMMAND = " ".join([
 MOVE_REGEX = re.compile(r'= \w+')
 
 
-def rough_value(initial_stones, initial_player, komi, katago_process):
+def rough_value(initial_stones, initial_player, komi, katago_process, visits):
     query = json.dumps({
         "id": "foo",
         "initialStones": initial_stones,
@@ -23,7 +23,8 @@ def rough_value(initial_stones, initial_player, komi, katago_process):
         "komi": komi,
         "boardXSize": 19,
         "boardYSize": 19,
-        "analyzeTurns": [0]
+        "analyzeTurns": [0],
+        "maxVisits": visits,
     })
     katago_process.sendline(query)
     katago_process.expect(r"\n")
@@ -35,23 +36,20 @@ def rough_value(initial_stones, initial_player, komi, katago_process):
     return response_data['rootInfo']['scoreLead']
 
 
-def fine_value(initial_stones, initial_player, katago_process):
+def fine_value(stones, player, katago_process, visits):
     komi = 0
-    delta = rough_value(initial_stones, initial_player, komi, katago_process)
-    print("komi", komi, "delta", delta)
+    delta = rough_value(stones, player, komi, katago_process, visits//4)
     komi += round(2 * delta) / 2
-    delta = rough_value(initial_stones, initial_player, komi, katago_process)
-    print("komi", komi, "delta", delta)
+    delta = rough_value(stones, player, komi, katago_process, visits//4)
     komi += round(2 * delta) / 2
-    delta = rough_value(initial_stones, initial_player, komi, katago_process)
-    print("komi", komi, "delta", delta)
+    delta = rough_value(stones, player, komi, katago_process, visits//2)
     komi += delta
     return komi
 
 
-def mean_value(initial_stones, katago_process):
-    b_value = fine_value(initial_stones, "B", katago_process)
-    w_value = fine_value(initial_stones, "W", katago_process)
+def mean_value(initial_stones, katago_process, visits=2**10):
+    b_value = fine_value(initial_stones, "B", katago_process, visits//2)
+    w_value = fine_value(initial_stones, "W", katago_process, visits//2)
     return (b_value + w_value) / 2
 
 
