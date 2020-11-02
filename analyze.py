@@ -59,7 +59,6 @@ def fine_value(stones, player, katago_process, visits):
 
 
 def stats(initial_stones, katago_process, visits=2**7):
-    print(initial_stones)
     b_value = fine_value(initial_stones, "B", katago_process, visits//2)
     w_value = fine_value(initial_stones, "W", katago_process, visits//2)
     mean_value = (b_value + w_value) / 2
@@ -79,8 +78,9 @@ def analyze():
     print(stats([["B", "Q4"], ["W", "D4"]], child))
 
 
-def annotate_sgf():
-    with open("YoRHa2B-hakuseki.sgf", "rb") as f:
+def annotate_sgf(filename):
+    assert filename.endswith(".sgf")
+    with open(filename, "rb") as f:
         game = sgf.Sgf_game.from_bytes(f.read())
     root = game.get_root()
     board = boards.Board(root.get_size())
@@ -90,7 +90,8 @@ def annotate_sgf():
     root.set("C", f"Board value: {mean:.2f}\nTemp: {temp:.2f}")
     for child in root:
         annotate_subtree(child, board.copy(), mean, temp, process)
-    open("out.sgf", "wb").write(game.serialise())
+    outf = filename[:-4] + "__miai_values.sgf"
+    open(outf, "wb").write(game.serialise())
 
 
 def annotate_subtree(node, board, prev_mean, prev_temp, process):
@@ -104,10 +105,13 @@ def annotate_subtree(node, board, prev_mean, prev_temp, process):
     if color == 'w':
         move_value *= -1
     temp_increment = temp - prev_temp
-    node.set("C", f"Move value: {move_value:.2f}\n\nBoard: {mean:.2f}\nTemp: {temp:.2f} ({temp_increment:+.2f})")
-    for child in node:
-        annotate_subtree(child, board.copy(), mean, temp, process)
+    text = f"Move value: {move_value:.2f}\n\nBoard: {mean:.2f}\nTemp: {temp:.2f} ({temp_increment:+.2f})"
+    print(text.replace("\n", "    "))
+    node.set("C", text)
+    if len(stones) < 60:
+        for child in node:
+            annotate_subtree(child, board.copy(), mean, temp, process)
 
 
 if __name__ == "__main__":
-    annotate_sgf()
+    annotate_sgf("yt0205-hakuseki.sgf")
