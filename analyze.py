@@ -7,7 +7,7 @@ from sgfmill import sgf, boards, ascii_boards
 GTP_COORDS = 'ABCDEFGHJKLMNOPQRSTUVWXYZ'
 
 START_COMMAND = " ".join([
-    "katago analysis -analysis-threads 12 -config analysis_config.cfg",
+    "katago analysis -analysis-threads 1 -config analysis_config.cfg",
     "-model g170e-b20c256x2-s5303129600-d1228401921.bin.gz"
 ])
 
@@ -38,8 +38,8 @@ def rough_value(initial_stones, initial_player, komi, katago_process, visits):
         "maxVisits": visits,
     })
     katago_process.sendline(query)
-    katago_process.expect(r"\n")
-    katago_process.expect(r"({.*})\r\n")
+    katago_process.expect(r"\n", timeout=30)
+    katago_process.expect(r"({.*})\r\n", timeout=30)
     response = katago_process.match[0]
     # print(response)
     response_data = json.loads(response)
@@ -58,7 +58,7 @@ def fine_value(stones, player, katago_process, visits):
     return komi
 
 
-def stats(initial_stones, katago_process, visits=2**7):
+def stats(initial_stones, katago_process, visits=2**10):
     b_value = fine_value(initial_stones, "B", katago_process, visits//2)
     w_value = fine_value(initial_stones, "W", katago_process, visits//2)
     mean_value = (b_value + w_value) / 2
@@ -114,4 +114,4 @@ def annotate_subtree(node, board, prev_mean, prev_temp, process):
 
 
 if __name__ == "__main__":
-    annotate_sgf("yt0205-hakuseki.sgf")
+    annotate_sgf("01_rot.sgf")
