@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 
 import pexpect  # type: ignore
 from sgfmill import sgf, boards, ascii_boards
@@ -114,4 +115,4 @@ def annotate_subtree(node, board, prev_mean, prev_temp, process):
 
 
 if __name__ == "__main__":
-    annotate_sgf("01_rot.sgf")
+    annotate_sgf(sys.argv[1])
