@@ -31,7 +31,7 @@ def rough_value(initial_stones, initial_player, komi, katago_process, visits):
         "initialStones": initial_stones,
         "initialPlayer": initial_player,
         "moves": [],
-        "rules": "japanese",
+        "rules": "tromp-taylor",
         "komi": komi,
         "boardXSize": 19,
         "boardYSize": 19,
@@ -105,6 +105,8 @@ def annotate_subtree(node, board, prev_mean, prev_temp, process):
     move_value = mean - prev_mean
     if color == 'w':
         move_value *= -1
+    # Want territory score, but used area scoring to avoid tracking captures
+    move_value -= 1
     temp_increment = temp - prev_temp
     text = f"Move value: {move_value:.2f}\n\nBoard: {mean:.2f}\nTemp: {temp:.2f} ({temp_increment:+.2f})"
     print(text.replace("\n", "    "))
