@@ -37,7 +37,7 @@ def rough_value(initial_stones, initial_player, komi, katago_process, visits):
         "boardYSize": 19,
         "analyzeTurns": [0],
         "maxVisits": visits,
-    })
+    }, separators=(',', ':'))
     katago_process.sendline(query)
     katago_process.expect(r"\n", timeout=30)
     katago_process.expect(r"({.*})\r\n", timeout=30)
@@ -59,7 +59,7 @@ def fine_value(stones, player, katago_process, visits):
     return komi
 
 
-def stats(initial_stones, katago_process, visits=2**10):
+def stats(initial_stones, katago_process, visits=2**7):
     b_value = fine_value(initial_stones, "B", katago_process, visits//2)
     w_value = fine_value(initial_stones, "W", katago_process, visits//2)
     mean_value = (b_value + w_value) / 2
@@ -69,6 +69,7 @@ def stats(initial_stones, katago_process, visits=2**10):
 
 def get_process():
     child = pexpect.spawn(START_COMMAND, encoding='utf-8')
+    # child.logfile = sys.stdout
     child.expect('Started, ready to begin handling requests')
     child.expect(r"\n")
     return child
@@ -111,7 +112,7 @@ def annotate_subtree(node, board, prev_mean, prev_temp, process):
     text = f"Move value: {move_value:.2f}\n\nBoard: {mean:.2f}\nTemp: {temp:.2f} ({temp_increment:+.2f})"
     print(text.replace("\n", "    "))
     node.set("C", text)
-    if len(stones) < 60:
+    if len(stones) < 70:
         for child in node:
             annotate_subtree(child, board.copy(), mean, temp, process)
 
