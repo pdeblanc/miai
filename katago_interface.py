@@ -1,4 +1,3 @@
-import copy
 import json
 import os
 import shlex
@@ -6,13 +5,10 @@ import subprocess
 import threading
 import time
 import traceback
-from typing import Callable, Dict, Optional
 
-from kivy.utils import platform
+from kivy.utils import platform  # type: ignore
 
-from katrain.core.game_node import GameNode
-from katrain.core.lang import i18n
-from katrain.core.utils import find_package_resource
+from katrain.core.utils import find_package_resource  # type: ignore
 
 
 class EngineDiedException(Exception):
@@ -27,7 +23,8 @@ class KataGoEngine:
         self.query_counter = 0
         self.katago_process = None
         self.base_priority = 0
-        self.override_settings = {"reportAnalysisWinratesAs": "BLACK"}  # force these settings
+        # force these settings:
+        self.override_settings = {"reportAnalysisWinratesAs": "BLACK"}
         self._lock = threading.Lock()
         self.analysis_thread = None
         self.stderr_thread = None
@@ -56,7 +53,8 @@ class KataGoEngine:
                 print(f"Katago exe ({exe}) not found.")
                 return  # don't start
             elif not exepath and not any(
-                os.path.isfile(os.path.join(path, exe)) for path in os.environ.get("PATH", "").split(os.pathsep)
+                os.path.isfile(os.path.join(path, exe))
+                for path in os.environ.get("PATH", "").split(os.pathsep)
             ):
                 print(f"Katago exe ({exe}) not found in path.")
                 return  # don't start
@@ -67,14 +65,15 @@ class KataGoEngine:
                 print(f"Katago config ({cfg}) not found.")
                 return  # don't start
             self.command = shlex.split(
-                f'"{exe}" analysis -model "{model}" -config "{cfg}" -analysis-threads {config["threads"]}'
+                f'"{exe}" analysis -model "{model}" -config "{cfg}" '
+                f'-analysis-threads {config["threads"]}'
             )
         self.start()
 
     def start(self):
         try:
             print(f"Starting KataGo with {self.command}")
-            startupinfo = None # stop command box popups on windows/pyinstaller
+            startupinfo = None  # stop popups on windows/pyinstaller
             if hasattr(subprocess, "STARTUPINFO"):
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -89,8 +88,12 @@ class KataGoEngine:
         except (FileNotFoundError, PermissionError, OSError) as e:
             print(f"Starting katago failed: {e}")
             return  # don't start
-        self.analysis_thread = threading.Thread(target=self._analysis_read_thread, daemon=True).start()
-        self.stderr_thread = threading.Thread(target=self._read_stderr_thread, daemon=True).start()
+        self.analysis_thread = threading.Thread(
+            target=self._analysis_read_thread, daemon=True
+        ).start()
+        self.stderr_thread = threading.Thread(
+            target=self._read_stderr_thread, daemon=True
+        ).start()
 
     def restart(self):
         self.queries = {}
@@ -103,14 +106,14 @@ class KataGoEngine:
             if self.katago_process:
                 code = self.katago_process and self.katago_process.poll()
                 if code == 3221225781:
-                    died_msg = i18n._("Engine missing DLL")
+                    died_msg = "Engine missing DLL"
                 else:
                     os_error += f"status {code}"
-                    died_msg = i18n._("Engine died unexpectedly").format(error=os_error)
+                    died_msg = f"Engine died unexpectedly: {os_error}"
                 print(died_msg)
                 self.katago_process = None
             else:
-                died_msg = i18n._("Engine died unexpectedly").format(error=os_error)
+                died_msg = f"Engine died unexpectedly: {os_error}"
             raise EngineDiedException(died_msg)
         return ok
 
@@ -138,7 +141,10 @@ class KataGoEngine:
                     try:
                         print(line.decode(errors="ignore").strip())
                     except Exception as e:
-                        print("ERROR in processing KataGo stderr:", line, "Exception", e)
+                        print(
+                            "ERROR in processing KataGo stderr:",
+                            line, "Exception", e
+                        )
                 elif self.katago_process:
                     self.check_alive(exception_if_dead=True)
             except Exception as e:
@@ -167,14 +173,14 @@ class KataGoEngine:
                     continue
                 query_id = analysis["id"]
                 if query_id not in self.queries:
-                    print(f"Query result {query_id} discarded -- recent new game?")
+                    print(f"Query result {query_id} discarded")
                     continue
-                callback, error_callback, start_time, next_move = self.queries[query_id]
+                callback, error_callback, start_time = self.queries[query_id]
                 if "error" in analysis:
                     del self.queries[query_id]
                     if error_callback:
                         error_callback(analysis)
-                    elif not (next_move and "Illegal move" in analysis["error"]):  # sweep
+                    else:
                         print(f"{analysis} received from KataGo")
                 elif "warning" in analysis:
                     print(f"{analysis} received from KataGo")
@@ -182,27 +188,30 @@ class KataGoEngine:
                     del self.queries[query_id]
                     time_taken = time.time() - start_time
                     print(
-                        f"[{time_taken:.1f}][{query_id}] KataGo Analysis Received: {analysis.keys()}"
+                        f"[{time_taken:.1f}][{query_id}] "
+                        f"KataGo Analysis Received: {analysis.keys()}"
                     )
                     print(line)
                     try:
                         callback(analysis)
                     except Exception as e:
-                        print(f"Error in engine callback for query {query_id}: {e}")
+                        print(f"Error in callback for query {query_id}: {e}")
             except Exception as e:
-                print(f"Unexpected exception {e} while processing KataGo output {line}")
+                print(f"Exception {e} while processing KataGo output {line}")
                 traceback.print_exc()
 
-    def send_query(self, query, callback, error_callback, next_move=None):
+    def send_query(self, query, callback, error_callback):
         with self._lock:
             self.query_counter += 1
             if "id" not in query:
                 query["id"] = f"QUERY:{str(self.query_counter)}"
-            self.queries[query["id"]] = (callback, error_callback, time.time(), next_move)
+            self.queries[query["id"]] = (callback, error_callback, time.time())
         if self.katago_process:
             print(f"Sending query {query['id']}: {json.dumps(query)}")
             try:
-                self.katago_process.stdin.write((json.dumps(query) + "\n").encode())
+                self.katago_process.stdin.write(
+                    (json.dumps(query) + "\n").encode()
+                )
                 self.katago_process.stdin.flush()
             except OSError as e:
                 self.check_alive(os_error=str(e), exception_if_dead=True)
