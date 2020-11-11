@@ -5,11 +5,30 @@ import subprocess
 import threading
 import time
 import traceback
+from functools import partial
 from typing import Callable, Dict, Tuple
 
 from kivy.utils import platform  # type: ignore
 
 from katrain.core.utils import find_package_resource  # type: ignore
+
+
+def get_result(func):
+    done = False
+    result = None
+
+    def callback(data):
+        nonlocal done, result
+        done = True
+        result = data
+
+    def error_callback(data):
+        raise RuntimeError
+
+    func(callback, error_callback)
+    while not done:
+        time.sleep(0.001)
+    return result
 
 
 class EngineDiedException(Exception):
@@ -198,6 +217,9 @@ class KataGoEngine:
             except Exception as e:
                 print(f"Exception {e} while processing KataGo output {line}")
                 traceback.print_exc()
+
+    def query_synchronous(self, query):
+        return get_result(partial(self.send_query, query))
 
     def send_query(self, query, callback, error_callback):
         with self._lock:
