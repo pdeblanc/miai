@@ -21,15 +21,6 @@ class EngineDiedException(Exception):
 
 class KataGoEngine:
     """Starts and communicates with the KataGO analysis engine"""
-
-    # TODO: we don't support suicide in game.py, so no  "tt": "tromp-taylor", "nz": "new-zealand"
-    RULESETS_ABBR = [("jp", "japanese"), ("cn", "chinese"), ("ko", "korean"), ("aga", "aga")]
-    RULESETS = {fromkey: name for abbr, name in RULESETS_ABBR for fromkey in [abbr, name]}
-
-    @staticmethod
-    def get_rules(node):
-        return KataGoEngine.RULESETS.get(str(node.ruleset).lower(), "japanese")
-
     def __init__(self, config):
         self.queries = {}  # outstanding query id -> start time and callback
         self.config = config
@@ -83,7 +74,7 @@ class KataGoEngine:
     def start(self):
         try:
             print(f"Starting KataGo with {self.command}")
-            startupinfo = None  # stop command box popups on windows/pyinstaller
+            startupinfo = None # stop command box popups on windows/pyinstaller
             if hasattr(subprocess, "STARTUPINFO"):
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -100,10 +91,6 @@ class KataGoEngine:
             return  # don't start
         self.analysis_thread = threading.Thread(target=self._analysis_read_thread, daemon=True).start()
         self.stderr_thread = threading.Thread(target=self._read_stderr_thread, daemon=True).start()
-
-    def on_new_game(self):
-        self.base_priority += 1
-        self.queries = {}
 
     def restart(self):
         self.queries = {}
@@ -220,87 +207,3 @@ class KataGoEngine:
             except OSError as e:
                 self.check_alive(os_error=str(e), exception_if_dead=True)
                 return  # do not raise, since there's nothing to catch it
-
-    def request_analysis(
-        self,
-        analysis_node: GameNode,
-        callback: Callable,
-        error_callback: Optional[Callable] = None,
-        visits: int = None,
-        analyze_fast: bool = False,
-        time_limit=True,
-        find_alternatives: bool = False,
-        priority: int = 0,
-        ownership: Optional[bool] = None,
-        next_move: Optional[GameNode] = None,
-        extra_settings: Optional[Dict] = None,
-        reverse_color: bool = False
-    ):
-        nodes = analysis_node.nodes_from_root
-        moves = [m for node in nodes for m in node.moves]
-        initial_stones = [m for node in nodes for m in node.placements]
-        if next_move:
-            moves.append(next_move)
-        if ownership is None:
-            ownership = self.config["_enable_ownership"] and not next_move
-        if visits is None:
-            visits = self.config["max_visits"]
-            if analyze_fast and self.config.get("fast_visits"):
-                visits = self.config["fast_visits"]
-
-        if find_alternatives:
-            avoid = [
-                {
-                    "moves": list(analysis_node.analysis["moves"].keys()),
-                    "player": analysis_node.next_player,
-                    "untilDepth": 1,
-                }
-            ]
-        else:
-            avoid = []
-
-        size_x, size_y = analysis_node.board_size
-        settings = copy.copy(self.override_settings)
-        if time_limit:
-            settings["maxTime"] = self.config["max_time"]
-        if self.config.get("wide_root_noise", 0.0) > 0.0:  # don't send if 0.0, so older versions don't error
-            settings["wideRootNoise"] = self.config["wide_root_noise"]
-
-        if reverse_color:
-            query = {
-                "rules": self.get_rules(analysis_node),
-                "priority": self.base_priority + priority,
-                "analyzeTurns": [len(moves) + 1],
-                "maxVisits": visits,
-                "komi": analysis_node.komi,
-                "avoidMoves": [],
-                "boardXSize": size_x,
-                "boardYSize": size_y,
-                "includeOwnership": False,
-                "includePolicy": False,
-                "initialStones": [[m.player, m.gtp()] for m in initial_stones],
-                "initialPlayer": analysis_node.root.next_player,
-                "moves": [[m.player, m.gtp()] for m in moves] + [[analysis_node.next_player, "pass"]],
-                "overrideSettings": {**settings, **(extra_settings or {})},
-            }
-            self.send_query(query, callback, error_callback, next_move)
-            analysis_node.analysis_visits_requested = max(analysis_node.analysis_visits_requested, visits)
-        else:
-            query = {
-                "rules": self.get_rules(analysis_node),
-                "priority": self.base_priority + priority,
-                "analyzeTurns": [len(moves)],
-                "maxVisits": visits,
-                "komi": analysis_node.komi,
-                "avoidMoves": avoid,
-                "boardXSize": size_x,
-                "boardYSize": size_y,
-                "includeOwnership": ownership and not next_move,
-                "includePolicy": not next_move,
-                "initialStones": [[m.player, m.gtp()] for m in initial_stones],
-                "initialPlayer": analysis_node.root.next_player,
-                "moves": [[m.player, m.gtp()] for m in moves],
-                "overrideSettings": {**settings, **(extra_settings or {})},
-            }
-            self.send_query(query, callback, error_callback, next_move)
-            analysis_node.analysis_visits_requested = max(analysis_node.analysis_visits_requested, visits)
