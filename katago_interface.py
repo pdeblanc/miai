@@ -5,6 +5,7 @@ import subprocess
 import threading
 import time
 import traceback
+from typing import Callable, Dict, Tuple
 
 from kivy.utils import platform  # type: ignore
 
@@ -17,9 +18,14 @@ class EngineDiedException(Exception):
 
 class KataGoEngine:
     """Starts and communicates with the KataGO analysis engine"""
-    def __init__(self, config):
-        self.queries = {}  # outstanding query id -> start time and callback
-        self.config = config
+    def __init__(
+        self,
+        exe: str = "katago",
+        model: str = "g170e-b20c256x2-s5303129600-d1228401921.bin.gz",
+        cfg: str = "analysis_config.cfg",
+        threads: int = 4
+    ):
+        self.queries: Dict[str, Tuple[Callable, Callable, float]] = {}
         self.query_counter = 0
         self.katago_process = None
         self.base_priority = 0
@@ -30,44 +36,37 @@ class KataGoEngine:
         self.stderr_thread = None
         self.shell = False
 
-        exe = config.get("katago", "").strip()
-        if config.get("altcommand", ""):
-            self.command = config["altcommand"]
-            self.shell = True
-        else:
-            if not exe:
-                if platform == "win":
-                    exe = "katrain/KataGo/katago.exe"
-                elif platform == "linux":
-                    exe = "katrain/KataGo/katago"
-                else:  # e.g. MacOS after brewing
-                    exe = "katago"
+        if not exe:
+            if platform == "win":
+                exe = "katrain/KataGo/katago.exe"
+            elif platform == "linux":
+                exe = "katrain/KataGo/katago"
+            else:  # e.g. MacOS after brewing
+                exe = "katago"
 
-            model = find_package_resource(config["model"])
-            cfg = find_package_resource(config["config"])
-            if exe.startswith("katrain"):
-                exe = find_package_resource(exe)
+        if exe.startswith("katrain"):
+            exe = find_package_resource(exe)
 
-            exepath, exename = os.path.split(exe)
-            if exepath and not os.path.isfile(exe):
-                print(f"Katago exe ({exe}) not found.")
-                return  # don't start
-            elif not exepath and not any(
-                os.path.isfile(os.path.join(path, exe))
-                for path in os.environ.get("PATH", "").split(os.pathsep)
-            ):
-                print(f"Katago exe ({exe}) not found in path.")
-                return  # don't start
-            elif not os.path.isfile(model):
-                print(f"Katago model ({model}) not found in path.")
-                return  # don't start
-            elif not os.path.isfile(cfg):
-                print(f"Katago config ({cfg}) not found.")
-                return  # don't start
-            self.command = shlex.split(
-                f'"{exe}" analysis -model "{model}" -config "{cfg}" '
-                f'-analysis-threads {config["threads"]}'
-            )
+        exepath, exename = os.path.split(exe)
+        if exepath and not os.path.isfile(exe):
+            print(f"Katago exe ({exe}) not found.")
+            return  # don't start
+        elif not exepath and not any(
+            os.path.isfile(os.path.join(path, exe))
+            for path in os.environ.get("PATH", "").split(os.pathsep)
+        ):
+            print(f"Katago exe ({exe}) not found in path.")
+            return  # don't start
+        elif not os.path.isfile(model):
+            print(f"Katago model ({model}) not found in path.")
+            return  # don't start
+        elif not os.path.isfile(cfg):
+            print(f"Katago config ({cfg}) not found.")
+            return  # don't start
+        self.command = shlex.split(
+            f'"{exe}" analysis -model "{model}" -config "{cfg}" '
+            f'-analysis-threads {threads}'
+        )
         self.start()
 
     def start(self):
