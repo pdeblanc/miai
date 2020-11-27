@@ -1,4 +1,8 @@
+import datetime
+import os
 import random
+
+from sgfmill import sgf
 
 from katago_interface import KataGoEngine
 
@@ -76,7 +80,25 @@ def play_opening(engine, num_moves: int):
             history.append(get_move(turn))
         else:
             history.append(get_ai_move(history))
-    print(history)
+    now = datetime.datetime.now()
+    os.makedirs("out_sgf", exist_ok=True)
+    filename = os.path.join(
+        "out_sgf", now.strftime("%Y-%m-%d.%H.%M.%S") + ".sgf"
+    )
+    print(f"Saving as {filename}")
+    game = sgf.Sgf_game(19)
+    game.set_date(now.date())
+    root_node = game.get_root()
+    root_node.set("PB", "user" if player == 0 else "KataGo Policy")
+    root_node.set("PW", "user" if player == 1 else "KataGo Policy")
+    root_node.set("KM", 7)
+    for color, coords in history:
+        node = game.extend_main_sequence()
+        x = ALPHABET.index(coords[0])
+        y = int(coords[1:]) - 1
+        node.set_move(color, (y, x))
+    with open(filename, "wb") as f:
+        f.write(game.serialise())
 
 
 if __name__ == "__main__":
