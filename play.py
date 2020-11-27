@@ -113,4 +113,4 @@ if __name__ == "__main__":
         "analyzeTurns": [0],
         "maxVisits": 1,
     })
-    play_opening(engine, 10)
+    play_opening(engine, 20)
