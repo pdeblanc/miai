@@ -42,8 +42,10 @@ class KataGoEngine:
         exe: str = "katago",
         model: str = "g170e-b20c256x2-s5303129600-d1228401921.bin.gz",
         cfg: str = "analysis_config.cfg",
-        threads: int = 4
+        threads: int = 4,
+        silent: bool = True,
     ):
+        self.silent = silent
         self.queries: Dict[str, Tuple[Callable, Callable, float]] = {}
         self.query_counter = 0
         self.katago_process = None
@@ -90,7 +92,8 @@ class KataGoEngine:
 
     def start(self):
         try:
-            print(f"Starting KataGo with {self.command}")
+            if not self.silent:
+                print(f"Starting KataGo with {self.command}")
             startupinfo = None  # stop popups on windows/pyinstaller
             if hasattr(subprocess, "STARTUPINFO"):
                 startupinfo = subprocess.STARTUPINFO()
@@ -199,17 +202,19 @@ class KataGoEngine:
                     if error_callback:
                         error_callback(analysis)
                     else:
-                        print(f"{analysis} received from KataGo")
+                        if not self.silent:
+                            print(f"{analysis} received from KataGo")
                 elif "warning" in analysis:
                     print(f"{analysis} received from KataGo")
                 else:
                     del self.queries[query_id]
                     time_taken = time.time() - start_time
-                    print(
-                        f"[{time_taken:.1f}][{query_id}] "
-                        f"KataGo Analysis Received: {analysis.keys()}"
-                    )
-                    print(line)
+                    if not self.silent:
+                        print(
+                            f"[{time_taken:.1f}][{query_id}] "
+                            f"KataGo Analysis Received: {analysis.keys()}"
+                        )
+                        print(line)
                     try:
                         callback(analysis)
                     except Exception as e:
@@ -228,7 +233,8 @@ class KataGoEngine:
                 query["id"] = f"QUERY:{str(self.query_counter)}"
             self.queries[query["id"]] = (callback, error_callback, time.time())
         if self.katago_process:
-            print(f"Sending query {query['id']}: {json.dumps(query)}")
+            if not self.silent:
+                print(f"Sending query {query['id']}: {json.dumps(query)}")
             try:
                 self.katago_process.stdin.write(
                     (json.dumps(query) + "\n").encode()

@@ -1,0 +1,73 @@
+import random
+
+from katago_interface import KataGoEngine
+
+ALPHABET = 'ABCDEFGHJKLMNOPQRST'
+STONES = '⚫⚪'
+
+
+def get_move(turn: int) -> str:
+    while True:
+        user_input = input(STONES[turn] + " ")
+        parts = user_input.split("-")
+        if len(parts) == 2:
+            try:
+                x = int(parts[0])
+                y = int(parts[1])
+                return ["bw"[turn], ALPHABET[x - 1] + str(20 - y)]
+            except ValueError:
+                pass
+        print("Invalid input. Valid input is of the form `17-4`")
+
+
+def get_ai_move(history) -> str:
+    turn = len(history) % 2
+    query = {
+        "moves": history,
+        "komi": 7,
+        "rules": "tromp-taylor",
+        "boardXSize": 19,
+        "boardYSize": 19,
+        "analyzeTurns": [len(history)],
+        "maxVisits": 1,
+        "includePolicy": True,
+    }
+    response_data = engine.query_synchronous(query)
+    policy = response_data['policy']
+    r = random.random() * sum([x for x in policy if x >= 0])
+    for i in range(len(policy)):
+        if r <= policy[i]:
+            break
+        r -= max(0, policy[i])
+    x = i % 19
+    y = i // 19
+    color = "bw"[turn]
+    print(STONES[turn] + " " + str(x + 1) + "-" + str(y + 1))
+    return [color, ALPHABET[x] + str(19 - y)]
+
+
+def play_opening(engine, num_moves: int):
+    player = random.randint(0, 1)
+    history = []
+    while len(history) < num_moves:
+        turn = len(history) % 2
+        if turn == player:
+            history.append(get_move(turn))
+        else:
+            history.append(get_ai_move(history))
+    print(history)
+
+
+if __name__ == "__main__":
+    engine = KataGoEngine()
+    # Send a synchronous query to make sure engine is ready
+    engine.query_synchronous({
+        "moves": [],
+        "komi": 7,
+        "rules": "tromp-taylor",
+        "boardXSize": 19,
+        "boardYSize": 19,
+        "analyzeTurns": [0],
+        "maxVisits": 1,
+    })
+    play_opening(engine, 10)
