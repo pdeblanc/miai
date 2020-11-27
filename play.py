@@ -4,6 +4,27 @@ from katago_interface import KataGoEngine
 
 ALPHABET = 'ABCDEFGHJKLMNOPQRST'
 STONES = '⚫⚪'
+HANZI_NUMBERS = [
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六",
+    "七",
+    "八",
+    "九",
+    "十",
+    "十一",
+    "十二",
+    "十三",
+    "十四",
+    "十五",
+    "十六",
+    "十七",
+    "十八",
+    "十九"
+]
 
 
 def get_move(turn: int) -> str:
@@ -42,7 +63,7 @@ def get_ai_move(history) -> str:
     x = i % 19
     y = i // 19
     color = "bw"[turn]
-    print(STONES[turn] + " " + str(x + 1) + "-" + str(y + 1))
+    print(STONES[turn] + " " + HANZI_NUMBERS[x] + "之" + HANZI_NUMBERS[y])
     return [color, ALPHABET[x] + str(19 - y)]
 
 
