@@ -1,0 +1,737 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[AGA]SZ[19]KM[7.50]TM[1800]OT[5x40 byo-yomi]
+GN[the milk tea game]PW[spaceandgames]PB[lindentree]WR[2d]BR[2d]DT[2020-10-25]PC[OGS: https://online-go.com/game/27803367]C[Thoughts on improving:
+
+If we can correct 13 points of mistakes in our gameplay, that should be enough to gain 1 stone in strength (because 1 handicap stone = about 13 points).
+
+We can begin with faith in KataGo's judgments. However, that doesn't mean we should always try to mimic KataGo's favorite move. Other considerations are:
+
+(1) We may choose to study moves that are relatively easy for us to understand and remember
+(2) We may choose moves that would tend to confuse our opponents
+
+However, for the most part I think we should try to maximize the accuracy of our moves.
+
+I think that:
+(1) In the endgame, we should aim to play the very best moves.
+(2) in the opening, we should aim to play the best moves that are consistent with our style preferences
+(3) in the midgame, we should aim to reduce our mistakes by 50%.
+
+In the midgame, the best move might be very hard to understand. However, if the move we played lost 6 points, and there's a different move that only loses 3 points, but which we are able to understand, then we should study that move so we can use it the next time we're in a similar situation.
+
+
+Some new proverbs:
+1. The knight's triangle is a good shape.
+2. Be aware of peeping points.
+3. Check for profitable moves before running.]RE[W+12.50]
+;B[oc]LB[nd:B][qd:A]C[KataGo doesn't really like the 5-3 opening.
+
+A is considered a 0.13 point improvement. This seems like a small difference, but that's only because KataGo assumes black will make an enclosure at A at the first opportunity. So the 0.13 point loss is really because you give up the chance to play a different enclosure, such as the AB enclosure.]
+;W[pp]
+;B[ce]TR[cd][dd][qd]C[Any of these moves would be considered a 0.66-point improvement over black's move. This is because black won't be able to enclose both corners, so is now truly committed to the 5-3 opening.]
+;W[dp]
+;B[qn]LB[dc:A][ed:E][qd:D][cq:B][qq:C]C[A would be a 0.22-point improvement. B-E are also all considered slighly better than black's move.]
+;W[dc]LB[cc:A][qc:B]C[Either of these 3-3 points would be a 0.06-point improvement for white.
+
+It seems that when dealing with the 5-3 stone, the 3-4 approach and 3-3 approach are both viable, with the best option depending on the overall board position. I'm not yet sure when to prefer each, although the difference is small.]
+;B[gc]LB[ed:B][qd:A]C[Locally, the knight's move press at B is the modern choice, which is a 0.58-point improvement. A is even better at 0.62 points.
+
+By the way, after this pincer, B is also the best local followup for either player.]
+;W[fc]LB[ed:A]C[A would have been 0.62 points better for white.]
+(;B[gd]LB[fd:A]C[A would have been 0.48 points better. Variation included.]
+(;W[ee]LB[cd:B][de:A]C[Either A or B would be 0.47 points better. Variations included.]
+(;B[dg]C[This move is correct locally, but making an enclosure would still be 0.12 points better.]
+(;W[cd]LB[qc:C][qd:B][de:A]C[It seems any of A-C would have been 0.25 points better than white's move.]
+;B[de]CR[qd]C[Black's move is the best locally, although the enclosure still looks slightly better. From now on I'll just use a circle to mark good tenuki moves that have already been commented on.]
+(;W[fe]LB[fb:A]C[A would have been about 0.48 points better.]
+;B[fb]
+;W[ec]
+(;B[cj]LB[hf:A]C[A would have been 0.47 points better.]
+(;W[qd]LB[qc:A]C[The 3-3 point would have been about 0.18 points better for white. It looks like the 3-3 point gives white less territory, but also gives black less influence on the top.]
+;B[pe]
+;W[qe]
+;B[pf]
+;W[qg]
+(;B[qq]LB[hf:B][fg:A][nq:C]C[A is +1.06 points.
+B is +0.73 points.
+C is +0.24 points.]
+;W[qp]
+;B[pq]
+;W[op]
+;B[rp]
+(;W[oq]LB[jd:A][ro:B]C[A or B: +1.36 points]
+;B[ro]
+;W[kq]CR[jd]
+;B[cn]CR[hf][fg]
+(;W[fq]CR[jd]LB[dn:A]C[A is +0.83.]
+(;B[qc]CR[hf][fg]LB[pg:A]C[A: +1.80 points.]
+;W[pd]
+;B[od]
+;W[pc]
+(;B[pb]LB[qf:A]C[Black A is +1.94 points.]
+;W[qb]
+;B[qf]
+;W[ob]
+;B[nb]CR[hf][fg]C[I find this surprising, but apparently this move is bad and black have just played elsewhere instead. I guess it's aji keshi?
+
+Tenuki is + 3.47 points.]
+;W[pa]
+(;B[rf]LB[re:A]C[A is +1.40 points.]
+;W[nc]
+;B[mb]LB[kc:B][ne:A][hf:C][kp:D]C[Any of A-D would be 1.00 points better than extending.]
+;W[md]LB[ic:A][jc:C][id:B]C[This seems like the transition from opening to midgame. White's move is a 0.43 point loss.
+
+However, from here I won't necessarily comment on every small (i.e. less than one) point loss. That seems more appropriate for the opening which can benefit from memorization.]
+(;B[mc]LB[ne:A]C[This move is bad because it allows white to squeeze black into a dumpling shape. If black played a tiger's mouth at A instead, it would be 3.75 points better. However, white missed the opportunity.]
+(;W[nd]C[White lost 6.43 points with this move.]
+;B[oe]
+(;W[ld]LB[kd:B][mf:A]C[Either one-space jump would be better for white.
+
+A is +1.83 points.
+B is +1.66 points.]
+;B[kc]TR[hb][jb]SQ[fb][mb][nb][mc]C[The triangled points are now peeping points to cut off the squared stones. This will not be relevant for a while, but I think we should be always be aware of this kind of aji.]
+;W[mg]
+;B[oh]
+(;W[oj]LB[ni:A]C[White is creating another weak group now. Reducing at A instead would be 1.09 points better.]
+;B[ni]
+(;W[kg]LB[je:A][li:B][ni:2][oj:1]C[After 1 and 2, I felt some pressure on my upper group, so I wanted to mobilize my stones. However, KataGo says A is 2.5 points better than my move.
+
+It's clear that A does more to reduce black. And maybe the large table shape is overconcentrated. However, I'm still not satisfied that A feels safer for white.
+
+After poking around a bit, it seems that B is another option for white which is about as good as A. My worry there would be about weakening the 1 stone.]
+;B[kd]
+;W[ol]
+;B[on]
+;W[qi]
+(;B[lf]LB[ke:A]C[A would have been 1.5 points better for black.]
+;W[mf]
+;B[li]LB[ke:A]C[Black should have connected the stone at A (2.2 points better), especially since white can capture it. However, white failed to do so in the game.]
+(;W[lg]LB[ke:A]C[White would have gained 3.72 points by capturing at A. I think if I had read that the capture works, I would have played it. However, I didn't even bother reading.]
+;B[jh]
+(;W[if]
+;B[hf]
+;W[ig]
+;B[hi]
+(;W[gg]LB[he:A]C[A would have gained 4 points for white, and seems to be the only move. However, it does lead to many variations.]
+;B[gf]C[lindentree: mm
+lindentree: well, my default style is too aggressive
+]
+;W[ih]
+;B[ii]
+(;W[fg]LB[jb:A][eg:B]C[For white, A would be 1.8 points better, although all the variations seem difficult to read.
+
+B would be 1.2 points better.]
+(;B[ff]LB[ke:A]C[Playing A instead would be 3.31 points better for black.]
+;W[ef]
+;B[eg]LB[rc:C][id:A][je:B]C[This is apparently a big mistake (8.78 point loss), but white failed to punish it. See the next move variation for what white should do.
+
+Black should have defended at A or B. Or play the sente exchange at C and then come back to defend.]
+(;W[hg]LB[id:A]C[White missed a big (~17 point) opportunity by not playing at A.]
+;B[ge]LB[id:A]C[Black fixed the weakness, but A would still have been 2.5 points more profitable. Even now it has become a big yose point.]
+;W[fi]
+;B[hl]LB[eb:A][be:B][ke:C]SQ[oc][od][oe][pe][pf][qf][rf][jh][oh][hi][ii][li][ni]C[It seems that there are no urgent moves right now, so black should play a big move. Any of A-C would be about 2 points bigger than black's move.
+
+I think it should be obvious that a side move like B is bigger than an extension in the center. So our analysis might focus on proving to ourselves that the extension is not in fact urgent, and black's marked group is not in any trouble.]
+(;W[ej]LB[ke:B][di:A]C[Either A or B would be more profitable (+1.7 points). And both of these moves would help the white group.]
+;B[eh]
+;W[gi]
+(;B[dl]CR[eb][be][ke]C[1.67 point gain is possible.]
+;W[fl]LB[ke:F][mj:E][lk:D][qk:B][ml:C][ql:A]C[A-F are 2.44 to 2.17 points better than white's actual move.
+
+I should either convince myself that (F) is the best technique for defending white's center group, or that the right side group is in more need of defense.]
+;B[en]CR[eb][ke]C[Black should tenuki (+2.73 points).]
+(;W[em]CR[ke][lk][ql]LB[bd:C][ci:B][dm:A]C[Locally, A or B would be more interesting for white (+1.7).
+
+Actually, the aji at B mainly serves to let white play C in sente.]
+;B[dn]
+;W[fn]CR[lk][ql]
+;B[fo]
+;W[gn]
+;B[go]
+;W[ho]
+;B[ep]
+;W[eq]CR[lk]
+;B[hn]
+;W[hm]
+;B[in]
+;W[im]
+;B[gm]
+;W[fm]
+(;B[gl]LB[jn:A]C[A would have gained 1.77 points.]
+;W[jm]
+;B[io]
+;W[fk]
+(;B[ik]LB[nk:B][km:C][hp:A]C[It is true that these three stones were in danger. However, saving them seems to be a big error in judgment.
+
+Compared to black's actual move, A gains 4.4 points, B gains 7.3 points, and C gains 7.2 points.
+
+I think B and C are a bit hard to understand. They look like fighting moves, but KataGo thinks white should ignore them anyway. Yet these are the best movesl]
+;W[hp]
+(;B[ko]LB[nj:B][mk:D][nk:C][ip:A]C[KataGo thinks any of the moves A-D would gain 2.6 points compared to this one-space jump. I really don't get the idea of A though.]
+(;W[nh]LB[oi:A][lm:B][ln:C]C[This is really bad for white. Locally, A is better by 7.5 points. B or C are slightly (0.36 points) preferred over A.
+
+It seems like B and C have a similar result, even if the technique is a bit different.]
+;B[oi]
+(;W[og]LB[pj:A]C[Playing at A would have been 4 points better. But I guess white is already committed to this crazy plan.]
+;B[pg]
+;W[ph]LB[pj:A][qk:D][lm:C][ln:B]C[Again, white could have saved about 7.5 points by playing any of these reasonable moves instead.]
+;B[pi]
+;W[qh]
+;B[qj]
+;W[rj]
+(;B[rk]LB[mh:A]C[It seems black should have let white carry out his disastrous plan, e.g. by playing at A. Black would gain 16.8 points that way.]
+;W[pj]
+;B[qk]
+;W[mi]
+;B[nj]
+;W[mj]
+;B[nk]
+;W[mk]
+;B[nl]
+;W[ml]LB[lm:B][ln:A]C[This push seems to be aji keshi. A or B instead would gain ~2.5 points.]
+;B[nm]
+(;W[kl]LB[ln:A]C[A would have been a better connection for white, simultaneously threatening black (+8.35 points).]
+;B[lm]
+(;W[kk]LB[mm:A][ip:B]C[This is very very gote. I guess I was thinking, "I'd like to make absolutely sure black can't make eyes." But this is why we study tsumego.
+
+A would have gained 9.6 points of profit. Or B would gain 7 points.]
+;B[ip]
+;W[pr]LB[bp:B][ir:A]C[White should play A or B instead for +1.8 points.]
+;B[qr]LB[no:A][bp:B][ir:C]TR[eb][km][cq]C[This exchange loses 1.3 points for white. Locally, it does turn A into a good move. It doesn't change the values of B and C, which were already good moves without this exchange.
+
+Technically, black shouldn't have played this response, and could have gained 0.5 points with any of the triangled moves.]
+(;W[iq]C[There's a better (+3.24 points) tesuji for connecting.]
+;B[hq]
+;W[ir]
+;B[gq]
+;W[bp]
+(;B[cb]LB[fr:A]C[The sequence starting at A is 2.18 points bigger.]
+;W[bd]
+(;B[be]LB[eb:A]C[Black could have reduced white by about 4.65 points at A.]
+;W[eb]
+;B[gb]
+(;W[bb]LB[df:A]C[White could have gained 2.2 points with a sente sequence at A.]
+(;B[ba]LB[lq:A]C[It seems black is just throwing away ko threats and should play a big move elsewhere like A (+4 points).]
+(;W[ab]LB[ad:A]C[A would have been a better move for white.]
+;B[ad]
+;W[ac]
+;B[ae]
+;W[cc]
+;B[fr]
+;W[er]
+(;B[mq]LB[lq:A]C[A seems to be the correct move for black, both locally and globally (+6.8 points).]
+;W[mp]
+;B[mr]
+(;W[nr]LB[nq:A]C[It seems that playing at A instead would kill the two black stones, gaining 8.4 points.]
+;B[lp]
+;W[lq]
+;B[np]
+;W[mo]
+;B[no]
+;W[nq]
+;B[mn]
+;W[ms]
+;B[lr]
+;W[kr]
+;B[lo]
+;W[ls]
+;B[mp]
+;W[ps]
+;B[hr]
+;W[jp]
+(;B[js]LB[gp:A]C[It seems that this move doesn't work and just loses 1.3 points. Black could instead just capture at A.]
+;W[ks]
+;B[jo]
+;W[is]
+;B[bo]
+;W[cq]
+;B[le]
+(;W[me]LB[of:A]C[A seems like the more profitable way for white to connect (+1 point).]
+;B[re]
+;W[rd]
+(;B[qs]LB[df:A]C[Black would gain 2.9 points by fixing the aji at A instead.]
+;W[ck]
+;B[dk]
+;W[ci]
+;B[dj]
+;W[di]
+;B[ei]
+;W[df]
+;B[cg]
+;W[cf]
+;B[bf]
+;W[bh]
+;B[bg]
+;W[bj]
+;B[bk]
+;W[ak]
+;B[bl]
+;W[ag]
+(;B[ai]LB[al:A]C[It seems like there's no avoiding the seki now, and A is 7 points better for black than this inside play.]
+;W[ah]
+;B[al]
+;W[bi]
+;B[aj]
+;W[ak]
+;B[aj]
+;W[id]
+;B[je]
+;W[ie]
+;B[ib]
+;W[ke]
+(;B[jf]LB[kf:A]C[Capturing instead would gain about 2 points.]
+(;W[jg]LB[jd:A]C[White could have captured all four stones at A (+3.25 points).]
+;B[jd]
+;W[lc]
+;B[lb]
+;W[kf]
+;B[jb]LB[fa:C][na:B][ic:A]C[Let's try to analyze the yose here. Pass for black moves.
+
+Move values (deiri count)
+A -- Gote 3.5 points.
+B -- Black sente, 1 point.
+
+Need to think about best play around C. There's a risk of seki.]
+(;W[fs]
+;B[gs]
+;W[gr]
+;B[ek]
+;W[fj]
+;B[fr]
+;W[es]
+(;B[ed]LB[fd:A]C[A would have been 2 points better.]
+;W[fd]
+;B[dd]
+;W[da]
+;B[ea]LB[of:C][ll:A][km:B]C[Black can play A, B, or C instead for +2.3 points.]
+;W[fa]LB[se:E][of:D][fh:C][dm:B][co:A]C[Although capturing is sufficient, any of A-E would gain a half point for white.]
+;B[ga]CR[of][ll][km]C[This move is not actually sente, and white should ignore it. Black should have played one of the marked points instead (+2.5).]
+;W[ca]C[White loses 3.5 with this frivolous move.]
+;B[km]
+;W[jl]
+;B[of]
+;W[ng]
+;B[ll]
+;W[lk]
+;B[gp]
+;W[fh]
+;B[ak]
+(;W[ic]LB[se:A][dm:B][co:C]C[A and B are about 1.5 points better. C may be slightly inferior to A and B.]
+(;B[na]
+;W[jc]
+;B[kb]
+;W[oa]
+;B[do]
+;W[cp]
+;B[ea]
+;W[db]
+;B[dm]
+;W[hc]
+;B[hb]
+;W[ao]
+;B[an]
+;W[ap]
+;B[kp]
+;W[jq]
+;B[po]
+;W[se]
+;B[sf]
+;W[sd]
+;B[ri]
+;W[co]
+;B[bn]
+;W[jn]
+;B[kn]
+;W[fp]
+;B[eo]
+;W[gr]
+;B[qa]
+;W[ra]
+;B[fr]
+;W[ne]
+;B[rh]
+;W[gr]
+;B[os]
+;W[or]
+;B[fr]
+;W[fa]
+;B[qo]
+;W[ns]
+;B[gr]
+;W[ea]
+;B[ai]
+;W[el]
+;B[oo]
+;W[hd]
+;B[hs]
+;W[nf]
+;B[mm]
+;W[ch]
+;B[he]
+;W[]
+;B[])
+(;B[co]
+;W[dm]
+;B[cm]
+;W[cp]
+;B[ap]
+;W[jc]
+;B[kb]
+;W[hc]
+;B[hb]
+;W[aq]
+;B[ao]
+;W[br]C[It seems black can take small profit from invading here if white doesn't respond.]))
+(;W[se]
+;B[sf]
+;W[sd])
+(;W[dm]
+;B[cm])
+(;W[co]
+;B[do]
+;W[cp]
+;B[bn]
+;W[ap]))
+(;B[fd]
+;W[ed]
+;B[da]
+;W[ea]
+;B[fa]
+;W[db]
+;B[dd]
+;W[ca]))
+(;W[ic]LB[hc:B][jc:A]C[If white plays here, then A and B both become sente moves for white, but are still gote for black. So we may assume white will get to play both moves later.]
+;B[]
+;W[jc]
+;B[kb]
+;W[hc]
+;B[hb])
+(;W[]LB[ea:C][na:B][ic:A]C[Need to think about best play around C.]
+(;B[ic]CR[hc]LB[hd:A]SQ[hb][kb][jc]C[A is gote for either player. So treat the circle as a half point and the squares as full points.])
+(;B[na]C[Black has surrounded one point. I think this is sente, so white will answer.]
+;W[oa]))
+(;W[na]
+;B[ma]
+;W[oa]))
+(;W[jd]
+;B[kf]
+;W[jg]
+;B[ke]C[This connection doesn't work.]
+;W[jc]
+;B[jb]
+;W[lc]
+;B[kb]
+;W[lb]C[Black is totally destroyed.]))
+(;B[kf]))
+(;B[al]LB[ic:B][id:A]C[White will actually exchange A-B before continuing locally.]
+;W[bi]
+;B[aj]
+;W[fh]
+;B[ak]
+;W[ah]))
+(;B[df]))
+(;W[ne]))
+(;B[gp]
+;W[is]))
+(;W[nq]
+;B[or]
+;W[nr]
+;B[ps]
+;W[ns]
+;B[lp]
+;W[lq]
+;B[mo]
+;W[np]))
+(;B[lq]))
+(;W[ad]
+;B[bc]
+;W[ab]
+;B[cc]
+;W[ac]
+;B[dd]
+;W[db]))
+(;B[lq]
+;W[lr]
+;B[mq]
+;W[lp]
+;B[mp]))
+(;W[df]
+;B[cf]
+;W[cg]
+;B[ch]
+;W[bg]
+;B[bh]
+;W[ae]
+;B[fd]
+;W[ed]
+;B[ag]
+;W[bb]))
+(;B[eb]
+;W[db]
+;B[da]
+;W[bb]
+;B[ba]
+;W[ab]
+;B[be]
+;W[cc]
+;B[hb]))
+(;B[fr]
+;W[er]
+;B[lq]
+;W[lr]
+;B[mq]
+;W[kp]
+;B[mr]
+;W[lo]
+;B[mo]
+;W[kn]
+;B[lp]
+;W[jo]
+;B[ln]))
+(;W[ir]))
+(;W[mm]
+(;B[mn]
+;W[ln]
+;B[mo]
+;W[kn]
+;B[mq])
+(;B[ip]))
+(;W[ip]))
+(;W[ln]TR[ml][jm][ln]C[This knight's triangle is a shape that I've seen pop up several times now in KataGo analyses. I think it's a good shape.]))
+(;B[mh]
+;W[of]
+;B[qk]
+;W[rg]
+;B[rk]
+;W[ri]TR[oc][od][oe][pe][pf][qf][rf][pg]SQ[oj][ol][hm][im][jm]C[This would have been a good trade for black.]))
+(;W[pj]))
+(;W[oi]
+;B[nh]
+;W[ph]
+;B[pg]LB[lm:B][ln:A]C[After this exchange, A is superior to B by 2.4 points (whereas previously they were valued equally).])
+(;W[lm]TR[ik][gl][hl][gm]SQ[hn][in][io][ko]C[It seems like black will have to choose one group to save.])
+(;W[ln]TR[ik][gl][hl][gm]SQ[hn][in][io][ko]C[It seems like black will have to choose one group to save.]))
+(;B[ip]
+;W[ko]
+;B[nk]SQ[hn][in][io][ip]C[The four black stones are dead, and now black tenukis. But this is supposed to be good for black.]))
+(;B[hp])
+(;B[nk]
+;W[hp]
+;B[nl]SQ[qg][qi][oj][ol]C[It seems the fate of these stones is now very uncertain.])
+(;B[km]
+;W[mj]
+;B[mi]
+;W[oi]
+;B[ng]))
+(;B[jn]))
+(;W[dm]
+;B[em]
+;W[dk]
+;B[ck]
+;W[el]
+;B[cl])
+(;W[ci]
+;B[di]
+;W[dj]
+;B[ck]
+;W[bh]
+;B[cg]
+;W[bd]
+;B[bg]))
+(;B[ke])
+(;B[eb])
+(;B[be]))
+(;W[di])
+(;W[ke]))
+(;W[id]TR[mb][nb][kc][mc][kd][lf]SQ[ff][gf][hf]C[This is what white is supposed to do. This move simultaneously threatens to cut off either of these two groups.]
+(;B[ic]C[If black defends the top then white will cut off three stones.]
+;W[ge])
+(;B[he]C[If black defends the three stones, then the variations get more complex, since an attack on the top is not quite so straightforward.]
+;W[jd]
+(;B[hb]
+;W[ib]
+;B[jb]
+;W[ia])
+(;B[ib]
+;W[hb]
+;B[ic]
+;W[lc]
+;B[lb]
+;W[jc]
+;B[jb]
+;W[ke]
+;B[kb]
+;W[hd]
+;B[hc]
+;W[ge]C[White ends up using repeated threats against the top to capture the four stones.]))))
+(;B[ke]))
+(;W[jb]TR[mb][nb][mc]C[If black ignores this threat, white will cut off the triangled stones, connecting his groups.]
+;B[kb]
+;W[hb]
+(;B[gb]
+;W[he]SQ[id][ge]C[White aims at two connections. The top is much bigger, as it would kill black's L16 group.]
+;B[id]
+;W[ge])
+(;B[ic]C[This possibility is a bit scary for white, as the center group will need to make life somehow.]
+;W[gb]
+;B[gh]
+;W[fg]
+;B[hg]
+;W[hh]
+;B[gi]
+;W[ji]
+;B[kh]
+;W[id]
+;B[hd]
+;W[jd]
+;B[jc]
+;W[ke]
+;B[ie]
+;W[je]
+;B[ib]SQ[hc]C[This is needed to defend the cutting point.]
+;W[he]
+;B[ge]
+;W[jg]
+;B[jj]LB[mi:A]SQ[jh][kh]C[Black is defending two stones against the weakness at A. White is alive and has sente.]))
+(;W[eg]
+;B[gh]
+;W[id]
+;B[ic]
+;W[fg]
+;B[hg]C[Black shouldn't try this, but I want to see what happens.]
+;W[hh]
+;B[hd]
+;W[gi]
+;B[fh]
+;W[gj]
+;B[eh]
+;W[ji]
+;B[jj]
+;W[ki]
+;B[kj]
+;W[kh]
+;B[hk]))
+(;W[he]
+;B[ge]
+;W[gf]
+;B[hg]
+;W[ih]
+;B[gg]
+;W[ii]
+;B[nk]))
+(;W[oi]C[This move starts to appear on KataGo's radar around this time. It's not really recommended anytime soon, but worth keeping in mind.]
+;B[nh]
+;W[ph]
+;B[pg]
+;W[nf]
+;B[og]))
+(;W[ke]))
+(;B[ke]))
+(;W[je]
+;B[id]
+;W[hf]))
+(;W[ni]
+;B[oi]
+;W[nj]
+;B[oj]
+;W[nk]
+;B[pl]
+;W[id]C[Compared to the game result, white allowed black to create solid territory on the right, but black's top is reduced and white has potential in the center.]))
+(;W[mf]
+;B[ld]
+;W[nf])
+(;W[kd]
+;B[jc]C[I think it's clear that black's top is smaller than in the game.]))
+(;W[oe]
+;B[nd]
+;W[ne]
+;B[nc]
+;W[ng]
+;B[oh]
+;W[nh]
+;B[oi]
+;W[ni]
+;B[og]
+;W[ld]
+;B[kc]))
+(;B[ne]
+;W[lc]
+;B[kb]
+;W[kc]
+;B[jb]
+;W[id]
+;B[ic]))
+(;B[re]))
+(;B[qf]
+;W[ob]
+;B[re]
+;W[rd]
+;B[nb]
+;W[pb]
+;B[mc]))
+(;B[pg]
+;W[qh]
+;B[kd]))
+(;W[dn]
+;B[dm]
+;W[en]
+;B[co]
+;W[cp]))
+(;W[ro]
+;B[rq]
+;W[qo]CR[jd]
+;B[nq])
+(;W[jd]))
+(;B[fg])
+(;B[hf])
+(;B[nq]))
+(;W[qc]))
+(;B[hf]))
+(;W[fb]C[Black can tenuki now but the continuation shows black's strongest local followup.]
+;B[ed]CR[qd]
+;W[fd]
+;B[fe]
+;W[ge]
+;B[ef]
+;W[he]
+;B[cb]
+;W[db]
+;B[bd]
+;W[jd]CR[qd]))
+(;W[de]
+;B[cd]
+;W[cc])
+(;W[qd])
+(;W[qc]))
+(;B[qd]))
+(;W[de]
+;B[df]
+;W[ee]
+;B[bd]
+;W[bc]
+;B[cc]
+;W[cb]
+;B[cd]
+;W[bb]
+;B[gf]
+;W[fg]
+;B[ch]
+;W[dg]
+;B[cg]
+;W[ef])
+(;W[cd]
+;B[dd]
+;W[cc]LB[de:A]C[Black should tenuki now, but the best local move is at A.]
+;B[de]
+;W[fd]
+;B[fe]
+;W[gb]
+;B[hb]
+;W[fb]
+;B[ge]C[Now it seems the corner is settled.]))
+(;B[fd]
+;W[ed]
+;B[fb]
+;W[ec]
+;B[ge]
+;W[df]
+;B[cg]))

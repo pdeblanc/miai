@@ -1,0 +1,111 @@
+(;FF[4]AP[CGoban:3]C[Board value: 0.00
+Temp: 13.58]CA[UTF-8]GM[1]KM[6.50]
+PB[Black]PW[White]RU[Japanese]ST[2]SZ[19];B[pd]
+C[Move value: 13.13
+
+Board: 14.13
+Temp: 14.61 (+1.04)];
+C[Move value: 13.13
+
+Board: 0.00
+Temp: 13.47 (-1.14)]W[dd];B[dp]
+C[Move value: 13.08
+
+Board: 14.08
+Temp: 14.77 (+1.30)];
+C[Move value: 13.08
+
+Board: -0.00
+Temp: 13.37 (-1.40)]W[pp];B[qn]
+C[Move value: 12.25
+
+Board: 13.24
+Temp: 13.09 (-0.29)];
+C[Move value: 12.28
+
+Board: -0.03
+Temp: 13.35 (+0.26)]W[nq];B[fc]
+C[Move value: 12.25
+
+Board: 13.22
+Temp: 13.15 (-0.20)];
+C[Move value: 12.33
+
+Board: -0.11
+Temp: 13.48 (+0.33)]W[cf];B[qp]
+C[Move value: 13.86
+
+Board: 14.74
+Temp: 16.23 (+2.75)];
+C[Move value: 14.45
+
+Board: -0.70
+Temp: 14.67 (-1.56)]W[qq];B[rq]
+C[Move value: 14.59
+
+Board: 14.89
+Temp: 16.51 (+1.85)];
+C[Move value: 18.90
+
+Board: -5.01
+Temp: 23.25 (+6.74)]W[qo];B[rp]
+C[Move value: 18.56
+
+Board: 14.55
+Temp: 15.86 (-7.40)];
+C[Move value: 17.58
+
+Board: -4.03
+Temp: 21.33 (+5.47)]W[po];B[ro]
+C[Move value: 16.39
+
+Board: 13.36
+Temp: 13.45 (-7.88)];
+C[Move value: 12.82
+
+Board: -0.46
+Temp: 14.16 (+0.71)]W[pn];B[qm]
+C[Move value: 12.68
+
+Board: 13.22
+Temp: 13.21 (-0.95)];
+C[Move value: 12.50
+
+Board: -0.28
+Temp: 13.78 (+0.57)]W[cn];B[fq]
+C[Move value: 12.47
+
+Board: 13.18
+Temp: 13.08 (-0.69)];
+C[Move value: 11.96
+
+Board: 0.23
+Temp: 13.41 (+0.33)]W[hc];B[nc]
+C[Move value: 11.89
+
+Board: 13.12
+Temp: 12.57 (-0.84)];
+C[Move value: 11.63
+
+Board: 0.48
+Temp: 12.97 (+0.40)]W[en](;B[bp]
+C[Move value: 11.82
+
+Board: 13.30
+Temp: 12.54 (-0.43)])(;B[pm]
+C[Move value: 11.79
+
+Board: 13.27
+Temp: 12.97 (-0.01)])(;B[pq]
+C[Move value: 11.86
+
+Board: 13.34
+Temp: 13.07 (+0.10)])(;B[fe]
+C[Move value: 12.00
+
+Board: 13.49
+Temp: 13.30 (+0.33)])(;B[jc]
+C[Move value: 11.86
+
+Board: 13.35
+Temp: 12.77 (-0.21)]))

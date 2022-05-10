@@ -1,0 +1,856 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[6.50]TM[1500]OT[5x30 byo-yomi]
+PW[hakuseki]PB[masayuki]WR[1d]BR[1k]DT[2020-11-14]PC[The KGS Go Server at http://www.gokgs.com/]C[Board value: 0.00
+Temp: 13.42]RE[W+Resign]
+;B[pd]BL[1488.306]C[Move value: 13.07
+
+Board: 14.07
+Temp: 14.50 (+1.08)]
+;W[dd]WL[1495.227]C[Move value: 13.07
+
+Board: -0.00
+Temp: 13.62 (-0.88)]
+;B[pq]BL[1485.7]C[Move value: 13.08
+
+Board: 14.08
+Temp: 14.60 (+0.97)]
+;W[dp]WL[1491.945]C[Move value: 13.21
+
+Board: -0.13
+Temp: 13.57 (-1.03)]
+;B[fq]BL[1464.029]C[Move value: 12.24
+
+Board: 13.11
+Temp: 13.15 (-0.42)]
+(;W[qo]WL[1486.144]C[Move value: 12.39
+
+Board: -0.27
+Temp: 13.84 (+0.70)]
+;B[op]BL[1457.745]C[Move value: 12.62
+
+Board: 13.34
+Temp: 13.12 (-0.73)]
+(;W[cn]WL[1477.008]C[Move value: 12.35
+
+Board: -0.00
+Temp: 13.47 (+0.35)]
+;B[dr]BL[1438.152]C[Move value: 11.92
+
+Board: 12.91
+Temp: 12.87 (-0.59)]
+(;W[cq]WL[1470.363]C[Move value: 12.22
+
+Board: -0.31
+Temp: 13.71 (+0.84)]
+;B[iq]BL[1434.576]C[Move value: 12.30
+
+Board: 12.99
+Temp: 12.83 (-0.88)]
+(;W[qc]WL[1459.019]C[Move value: 12.77
+
+Board: -0.78
+Temp: 14.64 (+1.80)]
+;B[pc]BL[1416.724]C[Move value: 14.11
+
+Board: 14.33
+Temp: 16.14 (+1.50)]
+;W[qd]WL[1457.294]C[Move value: 15.24
+
+Board: -1.90
+Temp: 16.32 (+0.18)]
+;B[pe]BL[1414.978]C[Move value: 15.06
+
+Board: 14.16
+Temp: 15.95 (-0.37)]
+(;W[qe]WL[1439.735]C[Move value: 14.51
+
+Board: -1.35
+Temp: 15.44 (-0.52)]
+;B[qf]BL[1411.681]C[Move value: 14.47
+
+Board: 14.12
+Temp: 15.53 (+0.09)]
+;W[rf]WL[1436.234]C[Move value: 13.43
+
+Board: -0.31
+Temp: 13.32 (-2.21)]
+;B[qb]BL[1408.545]C[Move value: 12.18
+
+Board: 12.87
+Temp: 13.34 (+0.02)]
+;W[rb]WL[1427.558]C[Move value: 12.75
+
+Board: -0.88
+Temp: 14.07 (+0.73)]
+;B[re]BL[1384.856]C[Move value: 18.15
+
+Board: 18.27
+Temp: 24.11 (+10.04)]
+;W[rd]WL[1425.31]C[Move value: 18.62
+
+Board: -1.36
+Temp: 15.15 (-8.95)]
+;B[rg]BL[1380.094]C[Move value: 13.09
+
+Board: 12.73
+Temp: 13.00 (-2.15)]
+(;W[se]WL[1423.331]C[Move value: 12.42
+
+Board: -0.68
+Temp: 14.19 (+1.19)]
+;B[qg]BL[1377.535]C[Move value: 12.38
+
+Board: 12.70
+Temp: 13.09 (-1.10)]
+;W[ql]WL[1414.109]C[Move value: 12.23
+
+Board: -0.54
+Temp: 13.17 (+0.08)]
+;B[fc]BL[1372.427]C[Move value: 11.84
+
+Board: 12.31
+Temp: 12.55 (-0.63)]
+(;W[cf]WL[1402.045]C[Move value: 11.81
+
+Board: -0.51
+Temp: 13.43 (+0.88)]
+;B[jd]BL[1367.933]C[Move value: 11.86
+
+Board: 12.36
+Temp: 12.10 (-1.32)]
+(;W[kd]WL[1332.65]C[Move value: 11.63
+
+Board: -0.28
+Temp: 13.95 (+1.84)]
+;B[jc]BL[1324.437]C[Move value: 11.76
+
+Board: 12.48
+Temp: 12.96 (-0.98)]
+;W[kf]WL[1318.944]C[Move value: 12.05
+
+Board: -0.57
+Temp: 13.21 (+0.24)]
+;B[ld]BL[1320.147]C[Move value: 10.35
+
+Board: 10.78
+Temp: 11.29 (-1.91)]
+;W[mf]WL[1293.58]C[Move value: 10.15
+
+Board: -0.37
+Temp: 12.42 (+1.13)]
+;B[lc]BL[1300.791]C[Move value: 9.26
+
+Board: 9.89
+Temp: 11.55 (-0.87)]
+;W[of]WL[1289.843]C[Move value: 10.78
+
+Board: -1.89
+Temp: 12.55 (+0.99)]
+;B[pf]BL[1288.431]C[Move value: 9.93
+
+Board: 9.03
+Temp: 11.48 (-1.07)]
+;W[ob]WL[1286.509]C[Move value: 8.51
+
+Board: -0.47
+Temp: 16.26 (+4.78)]
+;B[pb]BL[1278.801]C[Move value: 13.61
+
+Board: 14.14
+Temp: 12.49 (-3.76)]
+;W[nd]WL[1284.163]C[Move value: 10.59
+
+Board: 2.55
+Temp: 11.88 (-0.61)]
+;B[nc]BL[1244.325]C[Move value: 10.13
+
+Board: 13.67
+Temp: 12.41 (+0.53)]
+(;W[dj]WL[1175.989]C[Move value: 11.15
+
+Board: 1.52
+Temp: 12.50 (+0.08)]
+;B[cj]BL[1234.667]C[Move value: 10.97
+
+Board: 13.49
+Temp: 12.66 (+0.17)]
+;W[ci]WL[1166.357]C[Move value: 11.59
+
+Board: 0.90
+Temp: 12.51 (-0.15)]
+;B[ck]BL[1231.01]C[Move value: 10.68
+
+Board: 12.58
+Temp: 13.93 (+1.42)]
+;W[di]WL[1155.776]C[Move value: 12.23
+
+Board: -0.65
+Temp: 12.45 (-1.48)]
+;B[cm]BL[1226.292]C[Move value: 12.63
+
+Board: 12.97
+Temp: 14.09 (+1.64)]
+;W[dm]WL[1144.863]C[Move value: 12.62
+
+Board: -0.65
+Temp: 13.20 (-0.90)]
+;B[bn]BL[1185.836]C[Move value: 12.77
+
+Board: 13.12
+Temp: 14.22 (+1.02)]
+;W[bm]WL[1116.655]C[Move value: 14.36
+
+Board: -2.24
+Temp: 16.07 (+1.85)]
+;B[cl]BL[1181.193]C[Move value: 16.84
+
+Board: 15.60
+Temp: 19.27 (+3.19)]
+;W[bo]WL[1115.666]C[Move value: 16.73
+
+Board: -2.13
+Temp: 16.11 (-3.16)]
+;B[dn]BL[1177.804]C[Move value: 23.40
+
+Board: 22.27
+Temp: 32.56 (+16.45)]
+;W[co]WL[1113.262]C[Move value: 22.69
+
+Board: -1.42
+Temp: 14.74 (-17.82)]
+;B[bl]BL[1166.675]C[Move value: 11.18
+
+Board: 10.76
+Temp: 11.81 (-2.94)]
+(;W[an]WL[1111.348]C[Move value: 11.28
+
+Board: -1.53
+Temp: 15.10 (+3.29)]
+;B[el]BL[1151.453]C[Move value: 12.62
+
+Board: 12.09
+Temp: 12.04 (-3.06)]
+;W[en]WL[1095.651]C[Move value: 11.95
+
+Board: -0.85
+Temp: 13.81 (+1.77)]
+;B[gl]BL[1131.34]C[Move value: 11.77
+
+Board: 11.92
+Temp: 12.01 (-1.80)]
+(;W[eb]WL[1086.481]C[Move value: 10.32
+
+Board: 0.60
+Temp: 12.55 (+0.54)]
+;B[if]BL[1060.023]C[Move value: 10.22
+
+Board: 11.83
+Temp: 12.50 (-0.05)]
+(;W[fb]WL[1075.907]C[Move value: 10.32
+
+Board: 0.51
+Temp: 12.92 (+0.43)]
+;B[jh]BL[1031.361]C[Move value: 12.21
+
+Board: 13.72
+Temp: 14.79 (+1.87)]
+;W[lh]WL[958.495]C[Move value: 11.81
+
+Board: 0.91
+Temp: 12.79 (-2.00)]
+;B[kj]BL[1016.467]C[Move value: 13.43
+
+Board: 15.34
+Temp: 16.44 (+3.65)]
+;W[lj]WL[947.743]C[Move value: 14.14
+
+Board: 0.20
+Temp: 13.72 (-2.72)]
+;B[kk]BL[1003.491]C[Move value: 12.65
+
+Board: 13.85
+Temp: 13.52 (-0.20)]
+;W[le]WL[898.205]C[Move value: 10.03
+
+Board: 2.82
+Temp: 12.11 (-1.41)]
+;B[gn]BL[940.914]C[Move value: 10.72
+
+Board: 14.54
+Temp: 13.57 (+1.46)]
+;W[mo]WL[865.88]C[Move value: 11.68
+
+Board: 1.86
+Temp: 13.86 (+0.29)]
+;B[pn]BL[925.865]C[Move value: 13.40
+
+Board: 16.26
+Temp: 14.50 (+0.64)]
+;W[qn]WL[857.437]C[Move value: 13.30
+
+Board: 1.96
+Temp: 14.25 (-0.25)]
+;B[nn]BL[906.02]C[Move value: 13.54
+
+Board: 16.50
+Temp: 14.25 (+0.00)]
+;W[jp]WL[778.846]C[Move value: 13.75
+
+Board: 1.76
+Temp: 16.02 (+1.77)]
+;B[jq]BL[868.308]C[Move value: 14.48
+
+Board: 17.23
+Temp: 14.64 (-1.38)]
+;W[jn]WL[738.168]C[Move value: 11.92
+
+Board: 4.32
+Temp: 14.36 (-0.29)]
+;B[kp]BL[830.865]C[Move value: 13.57
+
+Board: 18.89
+Temp: 14.57 (+0.21)]
+;W[nq]WL[721.924]C[Move value: 11.97
+
+Board: 5.92
+Temp: 14.26 (-0.31)]
+;B[kn]BL[816.083]C[Move value: 9.43
+
+Board: 16.35
+Temp: 14.50 (+0.24)]
+;W[lq]WL[710.079]C[Move value: 11.76
+
+Board: 3.58
+Temp: 15.84 (+1.34)]
+;B[lp]BL[806.667]C[Move value: 12.92
+
+Board: 17.51
+Temp: 15.03 (-0.81)]
+;W[mn]WL[704.062]C[Move value: 13.72
+
+Board: 2.78
+Temp: 20.50 (+5.47)]
+;B[mp]BL[801.282]C[Move value: 15.68
+
+Board: 19.47
+Temp: 12.70 (-7.80)]
+;W[nm]WL[689.346]C[Move value: 16.23
+
+Board: 2.23
+Temp: 23.19 (+10.49)]
+;B[np]BL[774.248]C[Move value: 16.86
+
+Board: 20.09
+Temp: 11.92 (-11.27)]
+;W[km]WL[686.523]C[Move value: 8.40
+
+Board: 10.69
+Temp: 11.45 (-0.47)]
+;B[jo]BL[768.699]C[Move value: 4.83
+
+Board: 16.53
+Temp: 11.77 (+0.32)]
+;W[jm]WL[676.696]C[Move value: 5.43
+
+Board: 10.10
+Temp: 11.51 (-0.26)]
+;B[lk]BL[727.459]C[Move value: 12.30
+
+Board: 23.40
+Temp: 14.98 (+3.47)]
+;W[ml]WL[643.956]C[Move value: 11.64
+
+Board: 10.76
+Temp: 10.98 (-4.00)]
+;B[mk]BL[704.164]C[Move value: 14.51
+
+Board: 26.27
+Temp: 19.68 (+8.70)]
+;W[md]WL[639.639]C[Move value: 18.56
+
+Board: 6.71
+Temp: 18.98 (-0.71)]
+;B[mc]BL[698.331]C[Move value: 18.24
+
+Board: 25.95
+Temp: 19.02 (+0.05)]
+;W[pm]WL[616.206]C[Move value: 14.29
+
+Board: 10.66
+Temp: 11.11 (-7.91)]
+;B[in]BL[658.016]C[Move value: 4.72
+
+Board: 16.38
+Temp: 12.10 (+0.99)]
+;W[qq]WL[507.899]C[Move value: 11.38
+
+Board: 4.00
+Temp: 14.40 (+2.29)]
+;B[qr]BL[653.378]C[Move value: 12.17
+
+Board: 17.17
+Temp: 11.69 (-2.71)]
+;W[rr]WL[503.927]C[Move value: 10.40
+
+Board: 5.77
+Temp: 13.08 (+1.40)]
+;B[qp]BL[633.524]C[Move value: 12.57
+
+Board: 19.34
+Temp: 16.56 (+3.48)]
+;W[rq]WL[501.068]C[Move value: 13.20
+
+Board: 5.14
+Temp: 11.75 (-4.82)]
+;B[rp]BL[631.839]C[Move value: 11.41
+
+Board: 17.55
+Temp: 17.41 (+5.67)]
+;W[pr]WL[499.247]C[Move value: 13.99
+
+Board: 2.56
+Temp: 11.97 (-5.44)]
+;B[or]BL[630.375]C[Move value: 13.78
+
+Board: 17.34
+Temp: 17.88 (+5.91)]
+;W[qs]WL[497.662]C[Move value: 13.69
+
+Board: 2.65
+Temp: 11.44 (-6.44)]
+;B[oq]BL[625.904]C[Move value: 7.44
+
+Board: 11.09
+Temp: 11.22 (-0.22)]
+;W[im]WL[427.244]C[Move value: 9.26
+
+Board: 0.82
+Temp: 10.93 (-0.29)]
+;B[hn]BL[614.077]C[Move value: 7.50
+
+Board: 9.32
+Temp: 10.46 (-0.46)]
+(;W[cr]WL[394.847]C[Move value: 6.42
+
+Board: 1.90
+Temp: 11.22 (+0.76)]
+;B[om]BL[587.992]C[Move value: 15.62
+
+Board: 18.52
+Temp: 24.59 (+13.37)]
+;W[ol]WL[391.295]C[Move value: 18.02
+
+Board: -0.50
+Temp: 13.34 (-11.25)]
+;B[on]BL[586.668]C[Move value: 16.88
+
+Board: 17.37
+Temp: 22.64 (+9.29)]
+(;W[ro]WL[381.127]C[Move value: 12.33
+
+Board: 4.04
+Temp: 15.95 (-6.69)]
+;B[rm]BL[574.71]C[Move value: 11.93
+
+Board: 16.97
+Temp: 20.95 (+5.00)]
+;W[rl]WL[364.97]C[Move value: 12.49
+
+Board: 3.48
+Temp: 16.13 (-4.82)]
+;B[so]BL[567.747]C[Move value: 15.08
+
+Board: 19.56
+Temp: 23.57 (+7.45)]
+;W[sn]WL[351.433]C[Move value: 16.05
+
+Board: 2.51
+Temp: 15.18 (-8.40)]
+;B[sp]BL[565.57]C[Move value: 15.93
+
+Board: 19.44
+Temp: 23.62 (+8.44)])
+(;W[nk]C[Move value: 16.27
+
+Board: 0.11
+Temp: 11.93 (-10.71)])
+(;W[pj]C[Move value: 14.81
+
+Board: 1.57
+Temp: 11.25 (-11.39)])
+(;W[nh]C[Move value: 14.43
+
+Board: 1.94
+Temp: 11.43 (-11.21)])
+(;W[jg]C[Move value: 14.87
+
+Board: 1.50
+Temp: 11.84 (-10.80)])
+(;W[og]C[Move value: 14.89
+
+Board: 1.49
+Temp: 12.43 (-10.20)])
+(;W[qj]C[Move value: 13.48
+
+Board: 2.90
+Temp: 14.55 (-8.09)]))
+(;W[fk]C[Move value: 13.09
+
+Board: -4.77
+Temp: 18.21 (+7.75)])
+(;W[hl]C[Move value: 10.23
+
+Board: -1.91
+Temp: 11.39 (+0.93)])
+(;W[ik]C[Move value: 9.35
+
+Board: -1.03
+Temp: 10.81 (+0.35)])
+(;W[ni]C[Move value: 9.56
+
+Board: -1.24
+Temp: 11.01 (+0.55)])
+(;W[oi]C[Move value: 9.87
+
+Board: -1.55
+Temp: 10.49 (+0.03)])
+(;W[on]C[Move value: 8.93
+
+Board: -0.61
+Temp: 9.54 (-0.92)])
+(;W[qj]C[Move value: 8.83
+
+Board: -0.51
+Temp: 10.49 (+0.02)])
+(;W[pj]C[Move value: 9.02
+
+Board: -0.70
+Temp: 10.63 (+0.17)])
+(;W[nk]C[Move value: 8.69
+
+Board: -0.37
+Temp: 11.40 (+0.93)])
+(;W[po]C[Move value: 8.80
+
+Board: -0.48
+Temp: 11.40 (+0.93)])
+(;W[oh]C[Move value: 9.42
+
+Board: -1.10
+Temp: 10.72 (+0.26)]))
+(;W[lj]C[Move value: 11.42
+
+Board: -0.60
+Temp: 12.26 (-0.23)])
+(;W[gn]C[Move value: 11.59
+
+Board: -0.76
+Temp: 12.79 (+0.29)])
+(;W[gp]C[Move value: 13.29
+
+Board: -2.47
+Temp: 16.24 (+3.74)])
+(;W[ip]C[Move value: 13.34
+
+Board: -2.52
+Temp: 17.01 (+4.52)])
+(;W[jp]C[Move value: 11.75
+
+Board: -0.92
+Temp: 13.08 (+0.58)])
+(;W[rq]C[Move value: 11.14
+
+Board: -0.31
+Temp: 12.82 (+0.32)])
+(;W[ki]C[Move value: 11.32
+
+Board: -0.49
+Temp: 12.33 (-0.17)])
+(;W[li]C[Move value: 11.29
+
+Board: -0.47
+Temp: 12.31 (-0.18)]))
+(;W[fd]C[Move value: 11.26
+
+Board: -0.34
+Temp: 13.88 (+1.87)])
+(;W[ec]C[Move value: 11.47
+
+Board: -0.55
+Temp: 13.47 (+1.45)])
+(;W[jp]C[Move value: 11.68
+
+Board: -0.76
+Temp: 12.85 (+0.83)])
+(;W[gp]C[Move value: 13.74
+
+Board: -2.83
+Temp: 16.93 (+4.91)])
+(;W[gn]C[Move value: 11.57
+
+Board: -0.66
+Temp: 12.76 (+0.74)])
+(;W[jl]C[Move value: 10.97
+
+Board: -0.05
+Temp: 12.68 (+0.67)])
+(;W[kl]C[Move value: 10.93
+
+Board: -0.02
+Temp: 12.41 (+0.40)])
+(;W[km]C[Move value: 10.96
+
+Board: -0.04
+Temp: 12.27 (+0.26)])
+(;W[lm]C[Move value: 10.87
+
+Board: 0.05
+Temp: 12.16 (+0.15)])
+(;W[mm]C[Move value: 10.80
+
+Board: 0.12
+Temp: 12.19 (+0.18)])
+(;W[mn]C[Move value: 10.97
+
+Board: -0.05
+Temp: 12.36 (+0.34)])
+(;W[ln]C[Move value: 10.95
+
+Board: -0.03
+Temp: 12.45 (+0.43)])
+(;W[rq]C[Move value: 11.38
+
+Board: -0.47
+Temp: 12.80 (+0.78)])
+(;W[md]C[Move value: 11.81
+
+Board: -0.89
+Temp: 13.67 (+1.65)]))
+(;W[el]C[Move value: 11.95
+
+Board: -2.19
+Temp: 13.38 (+1.58)])
+(;W[jp]C[Move value: 11.15
+
+Board: -1.39
+Temp: 12.97 (+1.17)])
+(;W[ip]C[Move value: 12.96
+
+Board: -3.21
+Temp: 17.31 (+5.50)])
+(;W[gp]C[Move value: 13.24
+
+Board: -3.48
+Temp: 17.32 (+5.51)])
+(;W[em]C[Move value: 10.85
+
+Board: -1.10
+Temp: 12.84 (+1.03)])
+(;W[en]C[Move value: 10.57
+
+Board: -0.81
+Temp: 12.73 (+0.92)])
+(;W[ec]C[Move value: 11.15
+
+Board: -1.39
+Temp: 13.01 (+1.20)])
+(;W[rq]C[Move value: 11.01
+
+Board: -1.25
+Temp: 12.52 (+0.71)])
+(;W[ek]C[Move value: 9.44
+
+Board: 0.32
+Temp: 12.53 (+0.73)])
+(;W[pn]C[Move value: 9.81
+
+Board: -0.05
+Temp: 12.28 (+0.48)])
+(;W[pm]C[Move value: 9.41
+
+Board: 0.35
+Temp: 12.64 (+0.83)]))
+(;W[jp]C[Move value: 11.74
+
+Board: 0.93
+Temp: 12.87 (+0.46)])
+(;W[gp]C[Move value: 13.26
+
+Board: -0.58
+Temp: 16.57 (+4.16)])
+(;W[rq]C[Move value: 11.53
+
+Board: 1.14
+Temp: 12.57 (+0.15)])
+(;W[jo]C[Move value: 11.35
+
+Board: 1.33
+Temp: 12.47 (+0.06)])
+(;W[jn]C[Move value: 11.07
+
+Board: 1.61
+Temp: 12.30 (-0.12)])
+(;W[md]C[Move value: 11.79
+
+Board: 0.88
+Temp: 13.92 (+1.50)])
+(;W[fd]C[Move value: 11.57
+
+Board: 1.10
+Temp: 13.33 (+0.92)])
+(;W[lj]C[Move value: 10.95
+
+Board: 1.73
+Temp: 12.04 (-0.37)])
+(;W[kj]C[Move value: 10.90
+
+Board: 1.78
+Temp: 12.12 (-0.29)])
+(;W[qq]C[Move value: 11.78
+
+Board: 0.89
+Temp: 13.74 (+1.33)])
+(;W[rp]C[Move value: 11.08
+
+Board: 1.59
+Temp: 12.19 (-0.22)])
+(;W[ec]C[Move value: 11.51
+
+Board: 1.16
+Temp: 13.56 (+1.15)])
+(;W[fk]C[Move value: 10.85
+
+Board: 1.83
+Temp: 12.16 (-0.25)]))
+(;W[of]C[Move value: 12.25
+
+Board: -0.90
+Temp: 14.28 (+2.18)]
+;B[pf]C[Move value: 12.08
+
+Board: 12.18
+Temp: 12.22 (-2.06)]
+;W[hc]C[Move value: 12.02
+
+Board: -0.83
+Temp: 13.18 (+0.96)]))
+(;W[jd]C[Move value: 12.22
+
+Board: -0.92
+Temp: 13.69 (+1.14)])
+(;W[jc]C[Move value: 12.21
+
+Board: -0.90
+Temp: 13.72 (+1.17)])
+(;W[ic]C[Move value: 12.08
+
+Board: -0.77
+Temp: 13.79 (+1.24)]))
+(;W[ql]C[Move value: 12.32
+
+Board: -0.59
+Temp: 13.43 (+0.42)])
+(;W[pf]C[Move value: 19.72
+
+Board: -7.98
+Temp: 28.29 (+15.29)])
+(;W[hp]C[Move value: 13.06
+
+Board: -1.33
+Temp: 15.45 (+2.44)]))
+(;W[rf]C[Move value: 13.67
+
+Board: -0.51
+Temp: 13.26 (-2.69)]))
+(;W[ql]C[Move value: 11.97
+
+Board: 0.02
+Temp: 13.21 (+0.38)])
+(;W[ip]C[Move value: 13.54
+
+Board: -1.55
+Temp: 16.05 (+3.22)])
+(;W[nc]C[Move value: 12.27
+
+Board: -0.28
+Temp: 13.64 (+0.81)])
+(;W[qf]C[Move value: 12.26
+
+Board: -0.27
+Temp: 13.70 (+0.87)])
+(;W[pl]C[Move value: 11.99
+
+Board: 0.00
+Temp: 13.39 (+0.55)]))
+(;W[hq]C[Move value: 12.26
+
+Board: -0.34
+Temp: 13.69 (+0.81)])
+(;W[ql]C[Move value: 12.15
+
+Board: -0.23
+Temp: 13.40 (+0.52)])
+(;W[pl]C[Move value: 12.19
+
+Board: -0.27
+Temp: 13.57 (+0.69)])
+(;W[pk]C[Move value: 12.09
+
+Board: -0.17
+Temp: 13.43 (+0.56)])
+(;W[qc]C[Move value: 12.95
+
+Board: -1.04
+Temp: 14.91 (+2.04)])
+(;W[fc]C[Move value: 12.10
+
+Board: -0.19
+Temp: 13.62 (+0.75)]))
+(;W[iq]C[Move value: 12.50
+
+Board: -0.16
+Temp: 13.68 (+0.56)])
+(;W[jp]C[Move value: 12.48
+
+Board: -0.13
+Temp: 13.89 (+0.78)])
+(;W[ql]C[Move value: 12.18
+
+Board: 0.16
+Temp: 13.58 (+0.47)])
+(;W[pk]C[Move value: 12.09
+
+Board: 0.25
+Temp: 13.62 (+0.50)])
+(;W[qc]C[Move value: 13.05
+
+Board: -0.70
+Temp: 14.82 (+1.70)]))
+(;W[po]C[Move value: 12.43
+
+Board: -0.32
+Temp: 13.89 (+0.74)])
+(;W[cn]C[Move value: 12.20
+
+Board: -0.09
+Temp: 13.53 (+0.38)])
+(;W[nc]C[Move value: 12.36
+
+Board: -0.25
+Temp: 13.71 (+0.56)])
+(;W[qc]C[Move value: 12.84
+
+Board: -0.72
+Temp: 14.45 (+1.31)])
+(;W[fc]C[Move value: 11.94
+
+Board: 0.18
+Temp: 13.71 (+0.56)])
+(;W[cf]C[Move value: 11.95
+
+Board: 0.16
+Temp: 13.61 (+0.46)])
+(;W[qf]C[Move value: 12.34
+
+Board: -0.23
+Temp: 13.72 (+0.57)]))

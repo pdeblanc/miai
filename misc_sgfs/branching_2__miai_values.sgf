@@ -1,0 +1,91 @@
+(;FF[4]AP[CGoban:3]C[Board value: 0.00
+Temp: 13.58]CA[UTF-8]GM[1]KM[6.50]
+PB[Black]PW[White]RU[Japanese]ST[2]SZ[19];B[qd]
+C[Move value: 13.00
+
+Board: 14.00
+Temp: 14.69 (+1.11)];
+C[Move value: 12.78
+
+Board: 0.22
+Temp: 14.31 (-0.37)]W[oc];B[]
+C[Move value: -1.00
+
+Board: 0.22
+Temp: 14.31 (-0.00)];
+C[Move value: 13.82
+
+Board: -14.60
+Temp: 15.40 (+1.09)]W[pe](;B[qe]
+C[Move value: 14.14
+
+Board: 0.54
+Temp: 14.87 (-0.53)](;
+C[Move value: 14.21
+
+Board: -14.67
+Temp: 15.55 (+0.68)]W[pf](;B[qg]
+C[Move value: 13.94
+
+Board: 0.27
+Temp: 14.44 (-1.11)])(;B[]
+C[Move value: -1.00
+
+Board: -14.68
+Temp: 15.56 (+0.01)];
+C[Move value: 14.58
+
+Board: -30.26
+Temp: 15.30 (-0.26)]W[qf]))(;
+C[Move value: -1.00
+
+Board: 0.54
+Temp: 14.87 (+0.00)]W[];B[pf]
+C[Move value: 14.17
+
+Board: 15.71
+Temp: 15.47 (+0.59)](;
+C[Move value: 13.40
+
+Board: 1.32
+Temp: 14.05 (-1.42)]W[of])(;
+C[Move value: -1.00
+
+Board: 15.71
+Temp: 15.46 (-0.01)]W[];B[mc]
+C[Move value: 13.10
+
+Board: 29.81
+Temp: 15.32 (-0.14)])))(;B[]
+C[Move value: -1.00
+
+Board: -14.60
+Temp: 15.41 (+0.00)];
+C[Move value: 14.31
+
+Board: -29.91
+Temp: 15.21 (-0.20)]W[qe](;B[ob]
+C[Move value: 14.40
+
+Board: -14.51
+Temp: 16.53 (+1.32)](;
+C[Move value: 14.60
+
+Board: -30.11
+Temp: 14.64 (-1.89)]W[pc])(;
+C[Move value: -0.99
+
+Board: -14.51
+Temp: 16.53 (+0.00)]W[];B[pc]
+C[Move value: 14.32
+
+Board: 0.81
+Temp: 14.08 (-2.46)]))(;B[]
+C[Move value: -1.00
+
+Board: -29.91
+Temp: 15.20 (-0.01)];
+C[Move value: 12.40
+
+Board: -43.31
+Temp: 15.80 (+0.60)]W[jd])))
