@@ -4,8 +4,6 @@ from sgfmill import sgf, boards, ascii_boards
 
 from katago_interface import KataGoEngine
 
-GTP_COORDS = 'ABCDEFGHJKLMNOPQRSTUVWXYZ'
-
 ALPHABET = 'ABCDEFGHJKLMNOPQRST'
 
 
