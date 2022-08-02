@@ -40,7 +40,7 @@ class KataGoEngine:
     def __init__(
         self,
         exe: str = "katago",
-        model: str = "g170e-b20c256x2-s5303129600-d1228401921.bin.gz",
+        model: str = "/Users/peter/.katrain/kata1-b40c256-s11101799168-d2715431527.bin.gz",
         cfg: str = "analysis_config.cfg",
         threads: int = 4,
         silent: bool = True,

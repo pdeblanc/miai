@@ -19,7 +19,7 @@ def rough_value(initial_stones, initial_player, komi, engine, visits):
         "initialStones": initial_stones,
         "initialPlayer": initial_player,
         "moves": [],
-        "rules": "tromp-taylor",
+        "rules": "stone-scoring",
         "komi": komi,
         "boardXSize": 19,
         "boardYSize": 19,
@@ -42,7 +42,7 @@ def fine_value(stones, player, engine, visits):
     return komi
 
 
-def stats(initial_stones, engine, visits=2**7):
+def stats(initial_stones, engine, visits=2**14):
     b_value = fine_value(initial_stones, "B", engine, visits//2)
     w_value = fine_value(initial_stones, "W", engine, visits//2)
     mean_value = (b_value + w_value) / 2
